@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.feedbacksystem.HelloController" spacing="10" alignment="CENTER" padding="10">
+  <TableView fx:id="feedbackTable" prefHeight="400" prefWidth="600">
+    <columns>
+      <TableColumn fx:id="feedbackIdColumn" text="ID" />
+      <TableColumn fx:id="contentColumn" text="Content" />
+      <TableColumn fx:id="ratingColumn" text="Rating" />
+      <TableColumn fx:id="dateColumn" text="Date" />
+    </columns>
+  </TableView>
+  <HBox spacing="10" alignment="CENTER">
+    <TextField fx:id="contentField" promptText="Enter feedback content" />
+    <ComboBox fx:id="ratingComboBox" promptText="Select Rating" />
+    <Button text="Add Feedback" onAction="#handleAddFeedback" />
+    <Button text="Delete Feedback" onAction="#handleDeleteFeedback" />
+  </HBox>
+</VBox>
